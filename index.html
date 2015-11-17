@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>The *Actually Usable* Aberystwyth Exam Timetable</title>
+        <link rel="stylesheet" href="//cdn.datatables.net/1.10.10/css/jquery.dataTables.min.css">
+        <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="//cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('#examTable').DataTable({
+                    "ajax": "exams.json"
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <table id="examTable">
+            <thead>
+                <tr>
+                    <th>Length</th>
+                    <th>Module Code</th>
+                    <th>Module Name</th>
+                    <th>Number of Students</th>
+                    <th>Room Code</th>
+                    <th>Room Name</th>
+                    <th>When (Date)</th>
+                    <th>When (Day of Week)</th>
+                    <th>When (Start Time)</th>
+                </tr>
+            </thead>
+        </table>
+    </body>
+</html>
